@@ -18,4 +18,7 @@
 ### apk 下载
 [点击下载GreenDaoTest安装包](http://fir.im/23uh)
 
+<img src="https://raw.githubusercontent.com/Kunzisoft/Android-SwitchDateTimePicker/master/art/demo2.gif" width="500">
+<img src="https://raw.githubusercontent.com/Kunzisoft/Android-SwitchDateTimePicker/master/art/demo1.gif" width="320">
+
 
