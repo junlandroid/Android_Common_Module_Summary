@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<layout xmlns:android="http://schemas.android.com/apk/res/android">-->
+    <!--&lt;!&ndash;databinding 基本使用&ndash;&gt;-->
+    <!--<data>-->
+        <!--<variable-->
+            <!--name="shop"-->
+            <!--type="com.hy.junl.greendaotest.bean.Shop"/>-->
+    <!--</data>-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical">-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:text="@{shop.name}"/>-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:text="@{shop.price}"/>-->
+    <!--</LinearLayout>-->
+<!--</layout>-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context=".activity.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="欢迎使用GreenDao3.2购物车Demo"
+        android:textColor="#333"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="作者：Junl"
+        android:textColor="#888"
+        android:textSize="14dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:text="CSDN博客地址：http://blog.csdn.net/yuan15800904094"
+        android:textColor="#888"
+        android:textSize="14dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="增加" />
+
+        <Button
+            android:id="@+id/bt_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="删除" />
+
+        <Button
+            android:id="@+id/bt_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="修改" />
+
+        <Button
+            android:id="@+id/bt_query"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查询" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_onUpgrade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="数据库升级" />
+
+    <ListView
+        android:id="@+id/lv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

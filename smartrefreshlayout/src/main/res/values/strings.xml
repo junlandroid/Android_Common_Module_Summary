@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SmartRefreshLayout</string>
+    <string name="title_activity_index_main">Refresh</string>
+
+    <string name="title_activity_practice_banner">gif效果</string>
+
+    <string name="title_activity_using_basic">基本使用</string>
+</resources>

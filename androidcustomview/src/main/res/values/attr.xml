@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BadgeView">
+        <attr name="badgeText" format="string"/>
+        <attr name="badgeBitmap" format="reference"/>
+        <attr name="badgeColor" format="color"/>
+        <attr name="badgeTextColor" format="color"/>
+        <attr name="badgeTextSize" format="dimension"/>
+        <attr name="badgeRadio" format="float"/>
+        <attr name="badgeIsVisibity" format="boolean"/>
+        <attr name="badgePosition">
+            <enum name="center" value="0"/>
+            <enum name="left_top" value="1"/>
+            <enum name="left_vertical" value="2"/>
+            <enum name="left_bottom" value="3"/>
+            <enum name="right_top" value="4"/>
+            <enum name="right_vertical" value="5"/>
+            <enum name="right_bottom" value="6"/>
+            <enum name="top_horizatal" value="7"/>
+            <enum name="bottom_horizatal" value="8"/>
+        </attr>
+    </declare-styleable>
+
+</resources>

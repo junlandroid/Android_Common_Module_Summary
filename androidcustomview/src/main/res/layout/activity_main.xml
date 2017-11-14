@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF0082CA"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    tools:context="com.hy.junl.androidcustomview.MainActivity">
+
+    <com.hy.junl.androidcustomview.BadgeView
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        custom:badgeBitmap="@mipmap/setting_icon"
+        custom:badgeText="99"
+        custom:badgeColor="#EA1D55"
+        custom:badgeIsVisibity="true"
+        custom:badgePosition="right_top"
+        custom:badgeRadio="0.18"
+        custom:badgeTextColor="@android:color/white"
+        custom:badgeTextSize="13sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转到点击图片变暗的页面"
+        android:onClick="skip2ImageView"
+        custom:layout_constraintLeft_toLeftOf="parent"
+        custom:layout_constraintTop_toBottomOf="@id/view"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

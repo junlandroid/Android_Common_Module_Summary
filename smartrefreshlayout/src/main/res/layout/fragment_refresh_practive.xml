@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context="com.hy.junl.smartrefreshlayout.fragment.RefreshUsingFragment">
+
+    <android.support.v7.widget.Toolbar style="@style/AppTheme.Toolbar"
+        android:id="@id/toolbar"
+        app:title="实战"/>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 注意 RecycleView 的tools:listitem属性-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            tools:listitem="@android:layout/simple_list_item_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+
+    defaultConfig {
+        applicationId "com.hy.junl.greendaotest"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //DataBinding
+    dataBinding {
+        enabled = true
+    }
+
+    //GreenDao
+    greendao{
+        //指定数据库schema版本号，迁移等操作会用到；
+        schemaVersion 1
+        //通过gradle插件生成的数据库相关文件的包名，默认为你的entity所在的包名；
+        daoPackage 'com.hy.junl.greendaotest.bean.dao'
+        //自定义生成数据库文件的目录，可以将生成的文件放到我们的java目录中，而不是build中，这样就不用额外的设置资源目录了。
+        targetGenDir 'src/main/java'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+
+    compile 'org.greenrobot:greendao:3.2.2' // add library
+    compile files('libs/xUtils-2.6.14.jar')
+
+    compile 'com.android.support:design:23.3.0'
+    compile 'com.lovedise:permissiongen:0.0.6'//Android6.0权限申请  {link:https://github.com/lovedise/PermissionGen}
+    compile 'com.google.code.gson:gson:2.7'
+
+}
