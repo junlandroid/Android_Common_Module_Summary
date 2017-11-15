@@ -1,26 +1,26 @@
 apply plugin: 'com.android.application'
 
+
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
+
+
     defaultConfig {
-        applicationId "com.hy.junl.module.summary"
+        applicationId "com.hy.junl.stetho"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-    }
-
-    //DataBinding
-    dataBinding {
-        enabled = true
     }
 }
 
@@ -29,13 +29,18 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+
     compile 'com.android.support:appcompat-v7:26.+'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 
-    compile 'com.android.support:design:23.3.0'//SnackBar
-    compile 'org.greenrobot:eventbus:3.0.0'//eventbus
-
-    compile 'com.lovedise:permissiongen:0.0.6'//Android6.0权限申请  {link:https://github.com/lovedise/PermissionGen}
-
+    // 一个android的orm，用于数据库操作
+    compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
+    //一个工具库，整个库使用jquery风格函数
+    compile('com.jayfeng:lesscode-core:2.1')
+    // 一个http请求库，配合stetho完成测试
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    //Android 调试神器-Stetho(Facebook出品)的使用
+    compile 'com.facebook.stetho:stetho:1.5.0'
+    compile 'com.facebook.stetho:stetho-okhttp3:1.5.0'
 }

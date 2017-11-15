@@ -1,1 +1,1 @@
-include ':app', ':smartrefreshlayout', ':greendaotest', ':androidcustomview'
+include ':app', ':smartrefreshlayout', ':greendaotest', ':androidcustomview', ':stetho'
