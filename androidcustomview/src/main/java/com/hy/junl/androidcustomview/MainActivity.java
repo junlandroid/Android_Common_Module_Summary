@@ -20,4 +20,8 @@ public class MainActivity extends AppCompatActivity {
     public void skip2ImageView(View view) {
         startActivity(new Intent(MainActivity.this, SecondActivity.class));
     }
+
+    public void skip2CustomAnimActivity(View view) {
+
+    }
 }
